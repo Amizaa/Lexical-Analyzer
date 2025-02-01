@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+unsigned long long factorial(int n) {
+    unsigned long long result = 1; // Use unsigned long long to handle large results
+    for (int i = 1; i <= n; i++) {
+        result *= i; // Multiply result by i
+    }
+    return result;
+}
+
+int main() {
+    int number;
+
+    printf("Enter a positive integer: ");
+    scanf("%d", &number);
+
+    if (number < 0) {
+        printf("Factorial is not defined for negative numbers.\n");
+    } else {
+        printf("Factorial of %d = %llu\n", number, factorial(number));
+    }

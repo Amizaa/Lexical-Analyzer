@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="Lexical_Analyser.js"></script>
+    <title>Lexical Analyser</title>
+</head>
+<body>
+
+    <h1 class="display-1 text-center">Lexical analyser of C compiler</h1>
+    <hr>
+
+    <div class="container">
+        <form class="text-center">
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1"><h3>Code (in C) :</h3></label>
+              <textarea placeholder="write code here" class="form-control border-info border-5" id="input" rows="10"></textarea>
+            </div>
+            <button type="button" class="btn btn-info m-5" onclick="lexer()">Analyse the code</button>
+        </form>
+
+        <h3 class="text-center">Output:</h3>
+        <div class="container m-4">
+            <table class="table" >
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Token</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Column</th>
+                    <th scope="col">Line</th>
+                    <th scope="col">Scope</th>
+                  </tr>
+                </thead>
+                <tbody id="output">
+                  
+                </tbody>
+            </table>
+              
+              
+        </div>
+    </div>
+    
+    <style>
+        textarea{
+            font-size: 1.5rem !important;
+        }
+    </style>
+    
+</body>
+</html>
